@@ -1,0 +1,9 @@
+{
+  "domain": "http_action",
+  "name": "HTTP Action",
+  "version": "1.0.0",
+  "requirements": ["httpx"],
+  "codeowners": ["@your-github-username"],
+  "documentation": "https://github.com/your-github-username/http_action",
+  "config_flow": true
+}

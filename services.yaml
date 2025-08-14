@@ -1,0 +1,49 @@
+make_request:
+  name: Make HTTP request
+  description: Perform an HTTP GET or POST request and return the result as the service response.
+  fields:
+    method:
+      name: Method
+      description: HTTP method (GET or POST)
+      required: true
+      example: GET
+      selector:
+        select:
+          options:
+            - GET
+            - POST
+    url:
+      name: URL
+      description: The URL to request.
+      required: true
+      example: "https://api.example.com/data"
+      selector:
+        text:
+    params:
+      name: Query parameters
+      description: Optional query parameters for the request (object/dict).
+      required: false
+      example: {"foo": "bar"}
+      selector:
+        object:
+    data:
+      name: POST data
+      description: Optional data to send in the body of a POST request (object/dict).
+      required: false
+      example: {"key": "value"}
+      selector:
+        object:
+    body:
+      name: POST body
+      description: Optional raw data to send as the POST body (string). If provided, this is used instead of 'data'.
+      required: false
+      example: '{"raw": "value"}'
+      selector:
+        text:
+    headers:
+      name: Headers
+      description: Optional HTTP headers (object/dict).
+      required: false
+      example: {"Authorization": "Bearer ..."}
+      selector:
+        object:
