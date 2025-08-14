@@ -7,8 +7,8 @@ import voluptuous as vol
 
 from homeassistant.core import HomeAssistant, ServiceCall, ServiceResponse
 from homeassistant.helpers import config_validation as cv
-from homeassistant.helpers.typing import ConfigType
 from homeassistant.helpers.httpx_client import get_async_client
+from homeassistant.helpers.typing import ConfigType
 
 _LOGGER = logging.getLogger(__name__)
 
